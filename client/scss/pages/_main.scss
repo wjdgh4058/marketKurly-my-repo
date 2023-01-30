@@ -1,17 +1,33 @@
 /* 이미지슬라이드 */
-.imgSlide {
-  background-color: #6b6b6b;
-  height: 400px;
-}
+@import '../_theme.scss';
 
 /* 메인 */
-.main {
-  height: 1920px;
-  background-color: aquamarine;
+
+.Main-banner {
+  // width: 100%;
+  height: auto;
+  // swiper 시 가로 나열을 위해 row nowrap 사용
+  display: flex;
+  flex-flow: row nowrap;
+  // 가운데 정렬
+  justify-content: center;
 }
 
+.today-recomend-product {
+  background-color: yellow;
+  width: 1050px;
+  display: flexbox;
+  justify-content: center;
+}
+
+.line-banner {
+  background-color: greenyellow;
+}
+
+.good-price-product {
+  background-color: aquamarine;
+}
 /* 푸터 */
 .footer {
-  height: 800px;
-  background-color: beige;
+  background-color: white;
 }
