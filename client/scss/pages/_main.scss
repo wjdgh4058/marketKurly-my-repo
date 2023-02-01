@@ -5,8 +5,11 @@
 $main_width: 1050px;
 
 .main {
-  width: 1920px;
+  // width: 1920px;
+  display: flex;
+  flex-flow: column wrap;
   position: relative;
+  justify-content: center;
 }
 
 // main banner
@@ -17,7 +20,7 @@ $main_width: 1050px;
   display: flex;
   flex-flow: row nowrap;
   // 가운데 정렬
-  // justify-content: center;
+  justify-content: center;
 }
 
 //product slide 1
