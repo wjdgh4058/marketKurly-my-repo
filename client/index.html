@@ -18,6 +18,11 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
     <title>marketKarly</title>
@@ -366,7 +371,7 @@
       </section>
 
       <!-- Add cart 팝업창 -->
-      <div class="add-cart-background">
+      <div class="add-cart-background a11y-hidden">
         <div class="add-cart-window">
           <section class="add-cart">
             <ul class="add-cart__list">
@@ -440,6 +445,22 @@
         </div>
       </div>
     </main>
+
+    <section>
+      <div class="main_popup">
+        <div class="layer_cont">
+          <div class="img_wrap">팝업 콘텐츠</div>
+          <div class="btn_wrap">
+            <!-- 오늘 하루 보지 않기 --->
+            <button class="btn_today_close">
+              <span>오늘 하루 보지 않기</span>
+            </button>
+            <!-- 그냥 닫기 --->
+            <button class="btn_close">close</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- 푸터 -->
     <footer class="footer">푸터</footer>
