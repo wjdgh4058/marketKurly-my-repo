@@ -84,3 +84,11 @@ let mainBannerSwiper = new Swiper('.Swiper1', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+// mousehover stop start 설정
+$('.swiper-slide').on('mouseover', function () {
+  mainBannerSwiper.autoplay.stop();
+});
+$('.swiper-slide').on('mouseout', function () {
+  mainBannerSwiper.autoplay.start();
+});
