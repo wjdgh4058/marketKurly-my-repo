@@ -584,12 +584,57 @@ table {
   justify-content: center;
 }
 
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .Main-banner {
   width: 100%;
   height: 370px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+}
+
+.swiper1 .swiper-button-next {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  right: 10%;
+  background: url("/client/css/img/Icon/Arrow.svg") 50% 50% no-repeat;
+  transform: rotate(180deg);
+}
+
+.swiper1 .swiper-button-prev {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  left: 10%;
+  background: url("/client/css/img/Icon/Arrow.svg") 50% 50% no-repeat;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
 }
 
 .today-recomend-product {
@@ -937,28 +982,6 @@ button {
   display: block;
   line-height: 40px;
   opacity: 0.8;
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 /* 기본 스타일 */

@@ -68,7 +68,7 @@ $(function () {
 });
 
 // swiper
-let mainBannerSwiper = new Swiper('.Swiper1', {
+let mainBannerSwiper = new Swiper('.swiper1', {
   loop: true, // 무한 반복
   // autoplay 3초마다 넘기기
   autoplay: {
