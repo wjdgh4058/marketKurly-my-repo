@@ -1,16 +1,24 @@
-/* 이미지슬라이드 */
-
 /* 메인 */
 
 $main_width: 1920px;
 $main_container_width: 1050px;
 
-// 공통 메인
 .main {
   // width: 1920px;
   display: flex;
   flex-flow: column wrap;
   position: relative;
+  justify-content: center;
+}
+
+// main banner
+.Main-banner {
+  width: 100%;
+  height: 370px; // 사용 안하면 a태그의 기본 값 설정이 되어있는 건지 오차가 발생함
+  // swiper 시 가로 나열을 위해 row nowrap 사용
+  display: flex;
+  flex-flow: row nowrap;
+  // 가운데 정렬
   justify-content: center;
 }
 
@@ -56,7 +64,7 @@ $main_container_width: 1050px;
   justify-content: center;
 }
 
-// swiper 화살표 위치
+//swiper 화살표 위치
 .swiper1 .swiper-button-next {
   position: absolute;
   width: 52px;
@@ -65,6 +73,8 @@ $main_container_width: 1050px;
   background: url('/client/css/img/Icon/Arrow.svg') 50% 50%
     no-repeat;
   transform: rotate(180deg);
+  opacity: 0;
+  transition: all ease-in-out 500ms;
 }
 
 .swiper1 .swiper-button-prev {
@@ -74,6 +84,12 @@ $main_container_width: 1050px;
   left: 10%;
   background: url('/client/css/img/Icon/Arrow.svg') 50% 50%
     no-repeat;
+  opacity: 0;
+  transition: all ease-in-out 500ms;
+}
+
+.buttonhidden {
+  opacity: 1 !important;
 }
 
 // swiper pagination
@@ -121,7 +137,7 @@ $main_container_width: 1050px;
   }
 }
 
-.product {
+.swiper-product {
   display: block;
   width: 249px;
   text-decoration: none;
@@ -161,6 +177,30 @@ $main_container_width: 1050px;
     }
   }
 }
+
+// //swiper2 화살표 위치
+// .swiper2 .swiper-button-next {
+//   position: absolute;
+//   width: 50px;
+//   height: 50px;
+//   right: -30px;
+//   top: calc(50% - 70px);
+//   background: url('/client/css/img/Icon/Arrow.svg') 50% 50%
+//     no-repeat;
+//   transform: rotate(180deg);
+//   margin: 10px 10px;
+// }
+
+// .swiper2 .swiper-button-prev {
+//   position: absolute;
+//   width: 50px;
+//   height: 50px;
+//   left: -30px;
+//   top: calc(50% - 70px);
+//   background: url('/client/css/img/Icon/Arrow.svg') 50% 50%
+//     no-repeat;
+//   margin: 10px 10px;
+// }
 
 //line benner
 .line-banner {
@@ -211,6 +251,9 @@ $main_container_width: 1050px;
   display: flex;
   flex-flow: column wrap;
   box-shadow: (0px 8px 36px rgba(0, 0, 0, 0.2));
+  border-radius: 16px;
+  background-color: $white;
+
   // align-items: flex-start;
   a {
     height: 586px;
@@ -219,11 +262,9 @@ $main_container_width: 1050px;
     }
   }
   &__buttons {
-    background-color: $white;
     height: 86px;
     display: flex;
     flex-flow: row nowrap;
-    border-radius: 0 0 16px 16px;
     font-size: 16px;
     font-weight: 400;
     line-height: 160%;
@@ -231,7 +272,6 @@ $main_container_width: 1050px;
       flex: 1;
       text-align: center;
       border: 0;
-      background-color: transparent;
     }
     &__button1 {
       border-right: 1px solid $gray-100;
@@ -249,6 +289,7 @@ $main_container_width: 1050px;
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
+    display: none;
   }
   &-window {
     position: relative;
@@ -376,84 +417,11 @@ $main_container_width: 1050px;
   }
 }
 
-/* 푸터 */
-.footer {
-  background-color: white;
-}
-
-/* 오늘 하루 보지 않기 팝업 */
-button {
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-
 .main_popup {
-  // position: fixed;
-  // z-index: 1005;
-  // -webkit-box-shadow: 0px 13px 40px -6px #061626;
-  // box-shadow: 0px 13px 40px -6px #061626;
-  // top: 50px;
-  // left: 50px;
   display: none;
 
   &.on {
     display: block;
     // background-color: #fff;
   }
-
-  // .img_wrap {
-  //   width: 200px;
-  //   height: 200px;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  // }
-
-  // .btn_close {
-  //   width: 32px;
-  //   height: 32px;
-  //   position: absolute;
-  //   top: 17px;
-  //   right: 17px;
-  //   font-size: 0;
-  //   border: 0;
-  //   background: none;
-
-  //   &::before {
-  //     content: '';
-  //     width: 2px;
-  //     height: 32px;
-  //     background-color: #333;
-  //     position: absolute;
-  //     top: 0;
-  //     left: 15px;
-  //     transform: rotate(45deg);
-  //   }
-  //   &::after {
-  //     content: '';
-  //     width: 32px;
-  //     height: 2px;
-  //     background-color: #333;
-  //     position: absolute;
-  //     top: 15px;
-  //     left: 0;
-  //     transform: rotate(45deg);
-  //   }
-  // }
-
-  // .btn_today_close {
-  //   width: 100%;
-  //   height: 45px;
-  //   background-color: #333;
-  //   text-align: center;
-  //   color: #fff;
-  //   font-size: 14px;
-  //   display: block;
-  //   span {
-  //     display: block;
-  //     line-height: 40px;
-  //     opacity: 0.8;
-  //   }
-  // }
 }
