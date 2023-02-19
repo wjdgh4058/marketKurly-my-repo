@@ -67,3 +67,7 @@ var toggleMainPopup = function () {
 $(function () {
   toggleMainPopup();
 });
+
+function test() {
+  console.log('test');
+}
